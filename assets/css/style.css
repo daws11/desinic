@@ -175,6 +175,10 @@ body {
   font-weight: var(--fw-500);
   border-radius: 0 25px;
   transition: var(--transition-2);
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: fadeInFromTop 3s ease forwards; 
+
 }
 
 .btn:is(:hover, :focus) { background-position: right; }
@@ -370,12 +374,19 @@ body {
   color: var(--white);
   font-size: var(--fs-1);
   margin-block-end: 20px;
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: fadeInFromTop 3s ease forwards; 
 }
 
 .hero-text {
   color: var(--white);
   font-size: var(--fs-8);
   margin-block-end: 30px;
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: fadeInFromTop 3s ease forwards; 
+  
 }
 
 
@@ -1047,4 +1058,11 @@ body {
 
   .footer-brand { grid-column: auto; }
 
+}
+
+@keyframes fadeInFromTop {
+  to {
+    opacity: 1; /* Akhirnya, atur opasitas menjadi 1 (penuh) */
+    transform: translateY(0); /* Kembalikan elemen ke posisi awal */
+  }
 }
